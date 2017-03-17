@@ -99,7 +99,7 @@
 浮动方法：&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;float + margin
 绝对定位方法：absolute + margin
 负外边距方法：margin-left + margin">
-<meta property="og:updated_time" content="2017-03-17T14:47:57.890Z">
+<meta property="og:updated_time" content="2017-03-17T15:11:32.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三栏式布局">
 <meta name="twitter:description" content="需求A：两边固定，中间自适应
@@ -365,9 +365,9 @@
         <h2 id="需求A：两边固定，中间自适应"><a href="#需求A：两边固定，中间自适应" class="headerlink" title="需求A：两边固定，中间自适应"></a>需求A：两边固定，中间自适应</h2><ul>
 <li>浮动方法：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float + margin</li>
 <li>绝对定位方法：absolute + margin</li>
-<li>负外边距方法：margin-left + margin<a id="more"></a>
-</li>
+<li>负外边距方法：margin-left + margin</li>
 </ul>
+<a id="more"></a>
 <h3 id="浮动：-float-margin"><a href="#浮动：-float-margin" class="headerlink" title="浮动： float + margin"></a>浮动： float + margin</h3><p>理解：左、右两栏首先分别向左、右浮动，然后中间栏不浮动并添加适当的外边距。<br>HTML文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt; &lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p><font color="red"> 注意：</font>left 和 right 都应该在main之前，否则在后面float的left、right就在main之后了。</p>
 <p>CSS文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">body&#123;min-width: 600px;&#125;</div><div class="line">.left,.right&#123;</div><div class="line">	width:200px;</div><div class="line">	height: 500px;</div><div class="line">	background-color: #bbb;</div><div class="line">&#125;</div><div class="line">.left&#123;float: left;&#125;</div><div class="line">.right&#123;float: right;&#125;</div><div class="line">.main&#123;</div><div class="line">	margin:0px 220px;</div><div class="line">	height: 500px;</div><div class="line">	background-color: burlywood;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
