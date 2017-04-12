@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tutorial," />
+  <meta name="keywords" content="http," />
 
 
 
@@ -87,16 +87,27 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="建立连接：客户端与服务器建立TCP连接
+发送请求：打开一个连接后，客户端把请求信息发送到服务器的相应端口上，完成请求动作提交。
+发送应答：服务器在处理完客户端请求之后，要向客户端发送响应消息。
+关闭连接：客户端和服务器端都可以关闭套接字socket来结束TCP/IP对话。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/03/14/hello-world/index.html">
+<meta property="og:title" content="一次完整的HTTP请求过程及步骤">
+<meta property="og:url" content="http://yoursite.com/2017/04/02/HTTP-Request-Process&Steps/index.html">
 <meta property="og:site_name" content="Lucky俏">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:updated_time" content="2017-03-17T14:56:47.529Z">
+<meta property="og:description" content="建立连接：客户端与服务器建立TCP连接
+发送请求：打开一个连接后，客户端把请求信息发送到服务器的相应端口上，完成请求动作提交。
+发送应答：服务器在处理完客户端请求之后，要向客户端发送响应消息。
+关闭连接：客户端和服务器端都可以关闭套接字socket来结束TCP/IP对话。">
+<meta property="og:image" content="http://yoursite.com/img/dns_recurser.png">
+<meta property="og:updated_time" content="2017-04-12T09:49:52.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="一次完整的HTTP请求过程及步骤">
+<meta name="twitter:description" content="建立连接：客户端与服务器建立TCP连接
+发送请求：打开一个连接后，客户端把请求信息发送到服务器的相应端口上，完成请求动作提交。
+发送应答：服务器在处理完客户端请求之后，要向客户端发送响应消息。
+关闭连接：客户端和服务器端都可以关闭套接字socket来结束TCP/IP对话。">
+<meta name="twitter:image" content="http://yoursite.com/img/dns_recurser.png">
 
 
 
@@ -124,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/14/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/02/HTTP-Request-Process&Steps/"/>
 
 
 
 
 
-  <title> Hello World | Lucky俏 </title>
+  <title> 一次完整的HTTP请求过程及步骤 | Lucky俏 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/HTTP-Request-Process&Steps/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Qiaoqiao">
@@ -280,7 +291,7 @@
             
             
               
-                Hello World
+                一次完整的HTTP请求过程及步骤
               
             
           </h1>
@@ -295,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T18:23:03+08:00">
-                2017-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T17:19:17+08:00">
+                2017-04-02
               </time>
             
 
@@ -305,6 +316,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTTP/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -331,15 +364,69 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <ul>
+<li>建立连接：客户端与服务器建立TCP连接</li>
+<li>发送请求：打开一个连接后，客户端把请求信息发送到服务器的相应端口上，完成请求动作提交。</li>
+<li>发送应答：服务器在处理完客户端请求之后，要向客户端发送响应消息。</li>
+<li>关闭连接：客户端和服务器端都可以关闭套接字socket来结束TCP/IP对话。</li>
+</ul>
+<a id="more"></a>
+<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p><strong>step 2：客户端与服务器建立TCP连接</strong></p>
+<p>在HTTP工作开始之前，Web浏览器首先要通过网络与Web服务器建立连接，该连接是通过TCP来完成的，该协议与IP协议共同构建Internet，即著名的TCP/IP协议族，因此Internet又被称作是TCP/IP网络。HTTP是比TCP更高层次的应用层协议，根据规则，只有低层协议建立之后才能进行更高层协议的连接，因此，首先要建立TCP连接，一般TCP连接的端口号是80。</p>
+<h3 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h3><p><strong>step 3：Web浏览器向Web服务器发送请求命令</strong> </p>
+<p>一旦建立了TCP连接，Web浏览器就会向Web服务器发送请求命令。例如：GET/sample/hello.jsp HTTP/1.1。</p>
+<p><strong>step 4：Web浏览器发送请求头信息</strong></p>
+<p>浏览器发送其请求命令之后，还要以头信息的形式向Web服务器发送一些别的信息，之后浏览器发送了一空白行来通知服务器，它已经结束了该头信息的发送。</p>
+<h3 id="发送应答"><a href="#发送应答" class="headerlink" title="发送应答"></a>发送应答</h3><p><strong>step 5：Web服务器应</strong></p>
+<p>客户机向服务器发出请求后，服务器会客户机回送应答， HTTP/1.1 200 OK ，应答的第一部分是协议的版本号和应答状态码。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">分类</th>
+<th style="text-align:center">分类描述</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1**</td>
+<td style="text-align:center">信息，服务器收到请求，需要请求者继续执行操作</td>
+<td style="text-align:center">100 Continue</td>
+</tr>
+<tr>
+<td style="text-align:center">2**</td>
+<td style="text-align:center">成功，操作被成功接收并处理</td>
+<td style="text-align:center">200 OK</td>
+</tr>
+<tr>
+<td style="text-align:center">3**</td>
+<td style="text-align:center">重定向，需要进一步的操作以完成请求</td>
+<td style="text-align:center">300     Multiple Choices</td>
+</tr>
+<tr>
+<td style="text-align:center">4**</td>
+<td style="text-align:center">客户端错误，请求包含语法错误或无法完成请求</td>
+<td style="text-align:center">400 Bad Request</td>
+</tr>
+<tr>
+<td style="text-align:center">5**</td>
+<td style="text-align:center">服务器错误，服务器在处理请求的过程中发生了错误</td>
+<td style="text-align:center">500 Internal Server Error</td>
+</tr>
+</tbody>
+</table>
+<p><strong>step 6：Web服务器发送应答头信息</strong> </p>
+<p>正如客户端会随同请求发送关于自身的信息一样，服务器也会随同应答向用户发送关于它自己的数据及被请求的文档。</p>
+<p><strong>step 7：Web服务器向浏览器发送数据</strong></p>
+<p>Web服务器向浏览器发送头信息后，它会发送一个空白行来表示头信息的发送到此为结束，接着，它就以Content-Type应答头信息所描述的格式发送用户所请求的实际数据。</p>
+<h3 id="关闭连接"><a href="#关闭连接" class="headerlink" title="关闭连接"></a>关闭连接</h3><p><strong>step 8：Web服务器关闭TCP连接</strong> </p>
+<p>一般情况下，一旦Web服务器向浏览器发送了请求数据，它就要关闭TCP连接，然后如果浏览器或者服务器在其头信息加入了这行代码：<code>Connection:keep-alive；</code>TCP连接在发送后将仍然保持打开状态，于是，浏览器可以继续通过相同的连接发送请求。保持连接节省了为每个请求建立新连接所需的时间，还节约了网络带宽。</p>
+<h3 id="输入一个URL回车后的后台过程"><a href="#输入一个URL回车后的后台过程" class="headerlink" title="输入一个URL回车后的后台过程"></a>输入一个URL回车后的后台过程</h3><p>1.客户机提出域名解析请求，并将该请求发送给本地的域名服务器。</p>
+<p>2.当本地的域名服务器收到请求后，就先查询本地缓存，如果有该记录项，则本地的域名服务器就直接地把查询的结果返回。</p>
+<p>3.如果本地的缓存中没有该记录项，则本地域名服务器就直接把请求发送给根域名服务器，然后根域名服务器再返回给本地域名服务器一个所查询域（根的子域）的主域名服务器的地址。</p>
+<p>4.本地服务器再向上一步返回的域名服务器发送请求，然后接受请求的服务器查询自己的缓存，如果没有该记录则返回相关的下级的域名服务器的地址。</p>
+<p>5.重复第四步，直到找到正确的记录。</p>
+<h4 id="DNS解析，DNS递归解析"><a href="#DNS解析，DNS递归解析" class="headerlink" title="DNS解析，DNS递归解析"></a>DNS解析，DNS递归解析</h4><p><img src="/img/dns_recurser.png"></p>
 
       
     </div>
@@ -369,7 +456,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+            <a href="/tags/http/" rel="tag"># http</a>
           
         </div>
       
@@ -382,15 +469,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/16/Three-Columns-Layout/" rel="next" title="三栏式布局">
+                <i class="fa fa-chevron-left"></i> 三栏式布局
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/14/Hello/" rel="prev" title="Hello">
-                Hello <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立连接"><span class="nav-number">1.</span> <span class="nav-text">建立连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送请求"><span class="nav-number">2.</span> <span class="nav-text">发送请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送应答"><span class="nav-number">3.</span> <span class="nav-text">发送应答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭连接"><span class="nav-number">4.</span> <span class="nav-text">关闭连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入一个URL回车后的后台过程"><span class="nav-number">5.</span> <span class="nav-text">输入一个URL回车后的后台过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS解析，DNS递归解析"><span class="nav-number">5.1.</span> <span class="nav-text">DNS解析，DNS递归解析</span></a></li></ol></li></ol></div>
             
 
           </div>
