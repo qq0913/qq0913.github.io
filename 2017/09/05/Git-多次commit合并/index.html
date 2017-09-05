@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="start," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -87,18 +87,24 @@
 
 
 
-<meta name="description" content="你好">
-<meta name="keywords" content="start">
+<meta name="description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。  (1) 两次commit之后，执行 git log 命令(2) git rebase -i  命令(3) 将需要合并的commit前面的 pick">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://yoursite.com/2017/03/14/Hello/index.html">
+<meta property="og:title" content="Git 多次commit合并">
+<meta property="og:url" content="http://yoursite.com/2017/09/05/Git-多次commit合并/index.html">
 <meta property="og:site_name" content="Lucky俏">
-<meta property="og:description" content="你好">
+<meta property="og:description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。  (1) 两次commit之后，执行 git log 命令(2) git rebase -i  命令(3) 将需要合并的commit前面的 pick">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-03-17T14:56:44.694Z">
+<meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/twocommits.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/git_rebase.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/combination2commits.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/github_one_commit.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/github_two_commits.png">
+<meta property="og:updated_time" content="2017-09-05T04:52:38.864Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="你好">
+<meta name="twitter:title" content="Git 多次commit合并">
+<meta name="twitter:description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。  (1) 两次commit之后，执行 git log 命令(2) git rebase -i  命令(3) 将需要合并的commit前面的 pick">
+<meta name="twitter:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/twocommits.png">
 
 
 
@@ -126,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/14/Hello/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/05/Git-多次commit合并/"/>
 
 
 
 
 
-  <title> Hello | Lucky俏 </title>
+  <title> Git 多次commit合并 | Lucky俏 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +267,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/Hello/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/05/Git-多次commit合并/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Qiaoqiao">
@@ -282,7 +288,7 @@
             
             
               
-                Hello
+                Git 多次commit合并
               
             
           </h1>
@@ -297,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T18:35:01+08:00">
-                2017-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T12:20:13+08:00">
+                2017-09-05
               </time>
             
 
@@ -333,8 +339,16 @@
       
 
       
-        <h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><a id="more"></a>
-<p>这是我的第一篇文章:)</p>
+        <blockquote>
+<p>在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。</p>
+</blockquote>
+<p>(1) 两次commit之后，执行 <strong>git log</strong> 命令<br><img src="/2017/09/05/Git-多次commit合并/twocommits.png" alt="twocommits.png" title=""><br>(2) <strong>git rebase -i</strong>  命令<br><img src="/2017/09/05/Git-多次commit合并/git_rebase.png" alt="git_rebase.png" title=""><br>(3) 将需要合并的commit前面的 <strong>pick</strong> 改为 <strong>squash</strong>(挤压)，保存退出后（:wq）可以修改message</p>
+<ul>
+<li>pick : 会执行这个 commit</li>
+<li>squash : 这个 commit 会被合并到前一个commit</li>
+</ul>
+<p>(4)再次执行 <strong>git log</strong> 命令，可以看到两次commit合并成了一个<br><img src="/2017/09/05/Git-多次commit合并/combination2commits.png" alt="combination2commits.png" title=""><br>(5)<strong>git push</strong>，可以看到只有一次提交<br><img src="/2017/09/05/Git-多次commit合并/github_one_commit.png" alt="github_one_commit.png" title=""></p>
+<p><em>ps</em>:当不进行git rebase -i进行合并commit时，github上push一次，但是会有两次commit记录，如下图<br><img src="/2017/09/05/Git-多次commit合并/github_two_commits.png" alt="github_two_commits.png" title=""></p>
 
       
     </div>
@@ -364,7 +378,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/start/" rel="tag"># start</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
@@ -377,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/04/02/HTTP-Request-Process&Steps/" rel="next" title="一次完整的HTTP请求过程及步骤">
+                <i class="fa fa-chevron-left"></i> 一次完整的HTTP请求过程及步骤
               </a>
             
           </div>
@@ -386,10 +400,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/16/Three-Columns-Layout/" rel="prev" title="三栏式布局">
-                三栏式布局 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,17 +446,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/ThiagoMessi.jpg"
@@ -508,22 +509,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你好"><span class="nav-number">1.</span> <span class="nav-text">你好</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
