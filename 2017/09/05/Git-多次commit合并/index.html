@@ -87,23 +87,23 @@
 
 
 
-<meta name="description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。  (1) 两次commit之后，执行 git log 命令(2) git rebase -i  命令(3) 将需要合并的commit前面的 pick">
+<meta name="description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 多次commit合并">
 <meta property="og:url" content="http://yoursite.com/2017/09/05/Git-多次commit合并/index.html">
 <meta property="og:site_name" content="Lucky俏">
-<meta property="og:description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。  (1) 两次commit之后，执行 git log 命令(2) git rebase -i  命令(3) 将需要合并的commit前面的 pick">
+<meta property="og:description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/twocommits.png">
 <meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/git_rebase.png">
 <meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/combination2commits.png">
 <meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/github_one_commit.png">
 <meta property="og:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/github_two_commits.png">
-<meta property="og:updated_time" content="2017-09-05T04:52:38.864Z">
+<meta property="og:updated_time" content="2017-09-05T04:56:30.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 多次commit合并">
-<meta name="twitter:description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。  (1) 两次commit之后，执行 git log 命令(2) git rebase -i  命令(3) 将需要合并的commit前面的 pick">
+<meta name="twitter:description" content="在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。">
 <meta name="twitter:image" content="http://yoursite.com/2017/09/05/Git-多次commit合并/twocommits.png">
 
 
@@ -342,6 +342,7 @@
         <blockquote>
 <p>在使用 Git 作为版本控制的时候，我们可能会由于各种各样的原因提交了许多临时的 commit，而这些 commit 拼接起来才是完整的任务。那么我们为了避免太多的 commit 而造成版本控制的混乱，通常我们推荐将这些 commit 合并成一个。</p>
 </blockquote>
+<a id="more"></a>
 <p>(1) 两次commit之后，执行 <strong>git log</strong> 命令<br><img src="/2017/09/05/Git-多次commit合并/twocommits.png" alt="twocommits.png" title=""><br>(2) <strong>git rebase -i</strong>  命令<br><img src="/2017/09/05/Git-多次commit合并/git_rebase.png" alt="git_rebase.png" title=""><br>(3) 将需要合并的commit前面的 <strong>pick</strong> 改为 <strong>squash</strong>(挤压)，保存退出后（:wq）可以修改message</p>
 <ul>
 <li>pick : 会执行这个 commit</li>
